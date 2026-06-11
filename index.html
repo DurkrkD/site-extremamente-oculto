@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Para Giovana</title>
+  <title>Pra Gigi♥️</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,600&family=Lora:ital,wght@0,400;1,400&family=Fira+Code:wght@300&display=swap" rel="stylesheet">
@@ -20,33 +20,25 @@
       justify-content: center;
       padding: 88px 36px 120px;
     }
-    .sky, .sky::before, .sky::after {
-      content: "";
+#stars-container {
       position: fixed;
-      top: 0; left: 0;
-      width: 1px; height: 1px;
+      top: 0; left: 0; 
+      width: 100%; height: 100%;
+      z-index: 9999;
       pointer-events: none;
-      z-index: 0;
     }
-    .sky {
-      box-shadow: 971px 1101px, 1346px 2167px, 1364px 1432px, 292px 1563px, 22px 1534px, 988px 1122px, 1317px 1885px, 1414px 932px, 1143px 6px, 1354px 595px, 901px 1505px, 332px 1391px, 430px 240px, 1180px 817px, 152px 2103px, 1406px 1380px, 1395px 1657px, 178px 76px, 124px 2084px, 457px 372px, 867px 1817px, 230px 1733px, 276px 2209px, 640px 2286px, 334px 210px, 1136px 701px, 1038px 342px, 820px 1715px, 1368px 1923px, 976px 1575px, 1108px 124px, 1312px 338px, 392px 1071px, 729px 1487px, 1413px 1579px, 1379px 1269px, 233px 1033px, 481px 1373px, 744px 1520px, 1047px 2347px, 1566px 2048px, 367px 115px, 780px 1761px, 66px 2125px, 52px 909px, 1383px 1749px, 89px 1590px, 418px 420px, 1542px 2252px, 451px 729px, 159px 1121px, 75px 1775px, 566px 2041px, 704px 213px, 1052px 1881px, 754px 855px, 695px 1154px, 933px 1950px, 1427px 1970px, 491px 686px, 951px 2248px, 745px 745px, 387px 900px, 1242px 27px, 549px 1399px, 367px 989px, 17px 2053px, 81px 1013px, 1267px 475px, 739px 2238px, 1031px 634px, 48px 1320px, 1369px 1144px, 1309px 483px, 470px 2159px, 1028px 1955px, 1003px 1448px, 537px 1822px, 1513px 664px, 919px 1193px, 1263px 188px, 569px 1351px, 1055px 1823px, 1443px 876px, 1503px 1167px, 1066px 1044px, 58px 15px, 1421px 111px, 269px 2285px, 544px 1721px, 283px 988px, 410px 1782px, 966px 240px, 1146px 2335px, 1279px 1056px, 1557px 160px, 855px 1766px, 1205px 380px, 828px 815px, 1188px 2281px, 711px 1509px, 1306px 1577px, 1153px 659px, 35px 636px, 63px 155px, 149px 1701px, 1095px 819px, 777px 402px, 1454px 1446px, 386px 1278px;
-      background: rgba(200, 220, 245, 0.55);
+    
+    .star {
+      position: absolute;
+      background-color: #ffffff;
       border-radius: 50%;
-      animation: twinkle 7s ease-in-out infinite;
+      box-shadow: 0 0 4px #ffffff, 0 0 8px #ffffff; 
+      animation: twinkleStar infinite alternate;
     }
-    .sky::before {
-      box-shadow: 554px 2218px, 1007px 510px, 434px 2188px, 1226px 1614px, 1189px 1006px, 146px 1666px, 728px 1325px, 168px 1361px, 290px 370px, 1476px 1279px, 636px 736px, 1555px 1785px, 748px 720px, 60px 856px, 999px 1817px, 994px 734px, 116px 1397px, 935px 976px, 670px 396px, 459px 31px, 737px 1501px, 572px 824px, 1409px 1771px, 606px 902px, 1057px 600px, 1026px 1361px, 332px 2050px, 951px 1592px, 1242px 2051px, 1445px 1023px, 942px 1882px, 100px 931px, 834px 2203px, 1431px 1619px, 1067px 1801px, 1358px 214px, 217px 2268px, 1168px 1278px, 717px 69px, 659px 2047px;
-      width: 1.6px; height: 1.6px;
-      background: rgba(214, 230, 250, 0.8);
-      border-radius: 50%;
-      animation: twinkle 5s ease-in-out infinite 1.5s;
-    }
-    .sky::after {
-      box-shadow: 739px 1258px, 348px 556px, 977px 924px, 1114px 550px, 515px 2025px, 94px 1757px, 747px 1169px, 836px 1158px, 796px 1314px, 303px 515px, 531px 133px, 1348px 1550px, 844px 1736px, 1265px 1078px;
-      width: 2.2px; height: 2.2px;
-      background: rgba(235, 245, 255, 0.95);
-      border-radius: 50%;
-      animation: twinkle 9s ease-in-out infinite 0.7s;
+    
+    @keyframes twinkleStar {
+      0% { opacity: 0.3; transform: scale(0.8); }
+      100% { opacity: 1; transform: scale(1.2); }
     }
     .grain {
       position: fixed;
@@ -58,7 +50,6 @@
     }
     #wrapper { position: relative; z-index: 1; width: 100%; max-width: 920px; z-index: 1; }
     #poem { max-width: 520px; }
-
     .photo-side {
       position: absolute;
       right: -30px;
@@ -116,15 +107,18 @@
       font-style: italic; font-weight: 600;
       color: rgba(63,207,142,0.82); letter-spacing: -0.5px; display: block;
     }
+
     .paren-block { padding-left: 22px; border-left: 1px solid rgba(63,180,140,0.32); }
     .paren-line {
       font-size: clamp(13px, 2vw, 14px); color: #5BB89A;
       font-style: italic; line-height: 1.8; display: block;
     }
+
     .code-line {
       font-family: 'Fira Code', monospace; font-size: 11.5px;
       color: rgba(52,211,130,0.6); letter-spacing: 0.4px; display: block;
     }
+
     .l       { display: block; }
     .normal  { color: #C8E6F5;                font-size: clamp(15px,2.5vw,17px); line-height: 1.65; }
     .short   { color: rgba(180,220,242,0.52); font-size: clamp(13px,2vw,14px);   line-height: 1.5;  font-style: italic; }
@@ -135,17 +129,10 @@
     .faint   { color: rgba(180,220,242,0.32); font-size: clamp(14px,2vw,15px);   line-height: 1.65; font-style: italic; }
     .emph    { color: #DFF2FF;                font-size: clamp(16px,2.8vw,19px); line-height: 1.5;  font-weight: 500;   letter-spacing: 0.3px; }
     .gold    { color: #3FCF8E;                font-size: clamp(15px,2.5vw,17px); line-height: 1.65; }
-    #sky { position: fixed; inset: 0; z-index: 0; pointer-events: none; }
-    #sky .star { position: absolute; border-radius: 50%; }
-    @keyframes twinkle {
-      0%, 100% { opacity: var(--base); }
-      50%       { opacity: var(--peak); }
-    }
-  </style>
+      </style>
 </head>
-<body></div>
+<body>
 </div>
-    <div class="sky"></div>
   <div class="grain"></div>
   <div id="wrapper">
     <div id="poem"></div>
@@ -166,7 +153,7 @@
       },
       {
             "t": "line",
-            "text": "há uma cidade entre nós.",
+            "text": "bom... tem uma cidade entre a gente,",
             "s": "normal"
       },
       {
@@ -176,12 +163,12 @@
       },
       {
             "t": "line",
-            "text": "É pouco demais",
+            "text": "É perto demais",
             "s": "normal"
       },
       {
             "t": "line",
-            "text": "pra ser distância",
+            "text": "pra ser longe,",
             "s": "indent"
       },
       {
@@ -224,7 +211,7 @@
       },
       {
             "t": "line",
-            "text": "nessa forma que você tem",
+            "text": "desse jeitinho que você tem",
             "s": "normal"
       },
       {
@@ -234,7 +221,7 @@
       },
       {
             "t": "line",
-            "text": "linda sem querer —",
+            "text": "linda sem querer.",
             "s": "normal"
       },
       {
@@ -245,7 +232,7 @@
       {
             "t": "line",
             "text": "antes de eu perceber.",
-            "s": "faint",
+            "s": "indent",
             "photo": "1"
       },
       {
@@ -254,32 +241,32 @@
       },
       {
             "t": "line",
-            "text": "E tem as fotos.",
+            "text": "E nas fotos.",
             "s": "normal"
       },
       {
             "t": "line",
-            "text": "Toda vez a mesma cena:",
+            "text": "Toda vez a mema coisa:",
             "s": "indent"
       },
       {
             "t": "line",
-            "text": "alguém aponta a câmera",
+            "text": "eu apontava a câmera",
             "s": "normal"
       },
       {
             "t": "line",
-            "text": "e você lá,",
+            "text": "e oc lá,",
             "s": "normal"
       },
       {
             "t": "line",
-            "text": "levantando o pé —",
+            "text": "levantando o pé...",
             "s": "indent"
       },
       {
             "t": "line",
-            "text": "o famoso pézinho. kkkk",
+            "text": "o tal do pézinho kkkk",
             "s": "faint"
       },
       {
@@ -294,7 +281,7 @@
       },
       {
             "t": "line",
-            "text": "fico com vontade de tirar mais uma.",
+            "text": "fico querendo tirar mais uma.",
             "s": "gold"
       },
       {
@@ -303,27 +290,27 @@
       },
       {
             "t": "line",
-            "text": "Na imersão do Márcio Micheli,",
+            "text": "E na imersão,",
             "s": "normal"
       },
       {
             "t": "line",
-            "text": "te puseram pra cuidar da mídia —",
+            "text": "quando te colocaram mídia",
             "s": "indent"
       },
       {
             "t": "line",
-            "text": "foto, vídeo, esse mundo.",
+            "text": " tirando foto, gravando vídeo e etc...",
             "s": "normal"
       },
       {
             "t": "line",
-            "text": "Eu ia te dando uma luz aqui e ali:",
+            "text": "Eu ia te dando uma diquinha aqui e ali:",
             "s": "normal"
       },
       {
             "t": "line",
-            "text": "o zoom, o foco, o ângulo.",
+            "text": "o zoom, o foco e bla bla bla....",
             "s": "indent"
       },
       {
@@ -343,22 +330,22 @@
       },
       {
             "t": "line",
-            "text": "com capricho",
+            "text": "com esselência,",
             "s": "indent"
       },
       {
             "t": "line",
-            "text": "uma coisa que nem tinha pedido pra fazer.",
+            "text": "coisa que nem precisava falar pra fazer.",
             "s": "indent"
       },
       {
             "t": "line",
-            "text": "Essa sua dedicação —",
+            "text": "Essa sua dedicação,",
             "s": "normal"
       },
       {
             "t": "line",
-            "text": "eu admiro demais.",
+            "text": "eu admiro muito.",
             "s": "gold",
             "photo": "2"
       },
@@ -385,12 +372,12 @@
       },
       {
             "t": "line",
-            "text": "Ah, e o nosso “me deixa”.",
+            "text": "Ah, e o “me deixa”.",
             "s": "emph"
       },
       {
             "t": "line",
-            "text": "Sem contexto, eu sei.",
+            "text": "trem de jacu, eu sabo.",
             "s": "faint"
       },
       {
@@ -400,7 +387,7 @@
       },
       {
             "t": "line",
-            "text": "você ME DEIXA",
+            "text": "você mim deixa",
             "s": "indent"
       },
       {
@@ -410,7 +397,7 @@
       },
       {
             "t": "line",
-            "text": "sem palavra,",
+            "text": "sem palavras,",
             "s": "normal"
       },
       {
@@ -429,12 +416,12 @@
       },
       {
             "t": "line",
-            "text": "(Aquela maçã que você dividiu com a gente —",
+            "text": "(Aquela maçã que você dividiu com a gente",
             "s": "indent"
       },
       {
             "t": "line",
-            "text": "eu lembro.)",
+            "text": "UMA maçã pra TRÊS KKKKKKK.)",
             "s": "ifaint"
       },
       {
@@ -443,27 +430,27 @@
       },
       {
             "t": "line",
-            "text": "Você toca violino.",
+            "text": "E vc toca violino.💚",
             "s": "normal"
       },
       {
             "t": "line",
-            "text": "Eu toco violão.",
+            "text": "Eu toco violão.💙",
             "s": "normal"
       },
       {
             "t": "line",
-            "text": "A melodia que a gente ainda não tocou junto",
+            "text": "Bom... A melodia que a gente ainda não tocou junto",
             "s": "normal"
       },
       {
             "t": "line",
-            "text": "já existe —",
+            "text": "já existe,",
             "s": "indent"
       },
       {
             "t": "line",
-            "text": "eu ouço ela",
+            "text": "e eu ouço ela",
             "s": "indent"
       },
       {
@@ -493,12 +480,12 @@
       },
       {
             "t": "line",
-            "text": "Você ficou meio sem graça.",
+            "text": "Você ficou meio sem graça e confusa,",
             "s": "faint"
       },
       {
             "t": "line",
-            "text": "Eu também, confesso.",
+            "text": "Mas eu também fiquei, confesso kkkkk.",
             "s": "faint"
       },
       {
@@ -508,7 +495,7 @@
       },
       {
             "t": "line",
-            "text": "meio sério, meio de brincadeira,",
+            "text": "meio sério, meio de zoera,",
             "s": "indent"
       },
       {
@@ -518,17 +505,17 @@
       },
       {
             "t": "line",
-            "text": "Que era de casar.",
+            "text": "Que era papo de casar e tal.",
             "s": "indent"
       },
       {
             "t": "line",
-            "text": "Eu fiquei quieto.",
+            "text": "Mas eu fiquei quieto.",
             "s": "normal"
       },
       {
             "t": "line",
-            "text": "Mas guardei.",
+            "text": "e acabei guardando.",
             "s": "gold"
       },
       {
@@ -542,7 +529,7 @@
       },
       {
             "t": "line",
-            "text": "sem branch, sem commit, sem nome —",
+            "text": "sem branch, sem commit, sem nome,",
             "s": "indent"
       },
       {
@@ -576,12 +563,12 @@
       },
       {
             "t": "line",
-            "text": "Ó, se eu quisesse fingir",
+            "text": "Ó se eu quisesse fingir",
             "s": "normal"
       },
       {
             "t": "line",
-            "text": "que isso é pouco —",
+            "text": "que isso é pouco,",
             "s": "indent"
       },
       {
@@ -591,7 +578,7 @@
       },
       {
             "t": "line",
-            "text": "não é bom nisso.",
+            "text": "não é bom nisso nn.",
             "s": "faint",
             "photo": "4"
       },
@@ -601,12 +588,12 @@
       },
       {
             "t": "line",
-            "text": "A gente se conheceu numa sexta.",
+            "text": "A gente se conheceu numa sexta né.",
             "s": "normal"
       },
       {
             "t": "line",
-            "text": "E é sexta de novo agora —",
+            "text": "E é sexta de novo agora já,",
             "s": "indent"
       },
       {
@@ -616,7 +603,7 @@
       },
       {
             "t": "line",
-            "text": "O Márcio falava muito disso:",
+            "text": "Lembra q Márcio falava muito disso?:",
             "s": "normal"
       },
       {
@@ -626,12 +613,12 @@
       },
       {
             "t": "line",
-            "text": "Então não foi por acaso",
+            "text": "Então, não foi por acaso",
             "s": "normal"
       },
       {
             "t": "line",
-            "text": "que eu escolhi te mandar isso hoje.",
+            "text": "que eu escolhi te mandar isso hoje. :)",
             "s": "gold"
       },
       {
@@ -640,7 +627,7 @@
       },
       {
             "t": "address-sm",
-            "text": "Giovana,"
+            "text": "Giovana..."
       },
       {
             "t": "blank",
@@ -648,7 +635,7 @@
       },
       {
             "t": "line",
-            "text": "Eu me perco em você de um jeito diferente:",
+            "text": "Eu me perco em vc de um jeito diferente:",
             "s": "normal"
       },
       {
@@ -658,7 +645,7 @@
       },
       {
             "t": "line",
-            "text": "mas o perder de quem",
+            "text": "mas o perder de alguém que,",
             "s": "normal"
       },
       {
@@ -677,12 +664,12 @@
       },
       {
             "t": "line",
-            "text": "Mas já tem direção —",
+            "text": "Mas já tem direção",
             "s": "indent"
       },
       {
             "t": "line",
-            "text": "igual girassol",
+            "text": "igual um girassol",
             "s": "normal"
       },
       {
@@ -702,7 +689,7 @@
       },
       {
             "t": "line",
-            "text": "eu já sei",
+            "text": "eu já até sei",
             "s": "normal"
       },
       {
@@ -716,82 +703,49 @@
       },
       {
             "t": "code",
-            "text": "— git commit -m \"primeira linha do nosso projeto\" 🎸"
+            "text": "— git commit -m \"primeira linha do nosso projeto\" :>"
+      },
+      {
+            "t": "code",
+            "text": "Ass: Dudu -`♡´-"
       }
 ];
-    function criarEstrelas() {
-      const sky = document.createElement('div');
-      sky.id = 'sky';
-      document.body.prepend(sky);
-      for (let i = 0; i < 120; i++) {
-        const star = document.createElement('div');
-        star.classList.add('star');
-        star.style.left = (Math.random() * 100).toFixed(2) + '%';
-        star.style.top = (Math.random() * 100).toFixed(2) + '%';
-        const size = (Math.random() * 1.5 + 1).toFixed(1);
-        star.style.width = size + 'px';
-        star.style.height = size + 'px';
-        const base = (Math.random() * 0.8 + 0.2).toFixed(4);
-        const peak = Math.min(1, parseFloat(base) + Math.random() * 0.6 + 0.4).toFixed(4);
-        const dur = (Math.random() * 4 + 3).toFixed(1);
-        const delay = (Math.random() * 5).toFixed(1);
-        const colors = ['#fff','#fff','#fff','#dce8ff','#fff4e0'];
-        star.style.background = colors[Math.floor(Math.random() * colors.length)];
-        star.style.setProperty('--base', base);
-        star.style.setProperty('--peak', peak);
-        star.style.animation = 'twinkle ' + dur + 's ease-in-out ' + delay + 's infinite';
-        sky.appendChild(star);
-      }
-    }
-    function renderPoema() {
-      const container = document.getElementById('poem');
-      POEM.forEach(item => {
-        if (item.t === 'blank') {
-          const spacer = document.createElement('div');
-          spacer.style.height = item.h + 'px';
-          container.appendChild(spacer);
-          revealList.push(null);
-          return;
-        }
-        const wrap = document.createElement('div');
-        wrap.classList.add('poem-item');
-        if (item.photo) wrap.id = 'trigger-' + item.photo;
-
-        if (item.t === 'address') {
-          wrap.classList.add('address-wrap');
-          const s = document.createElement('span');
-          s.className = 'address';
-          s.textContent = item.text;
-          wrap.appendChild(s);
-        } else if (item.t === 'address-sm') {
-          const s = document.createElement('span');
-          s.className = 'address-sm';
-          s.textContent = item.text;
-          wrap.appendChild(s);
-        } else if (item.t === 'line') {
-          const s = document.createElement('span');
-          s.className = 'l ' + item.s;
-          s.textContent = item.text;
-          wrap.appendChild(s);
-        } else if (item.t === 'paren') {
-          wrap.classList.add('paren-block');
-          item.lines.forEach(line => {
-            const s = document.createElement('span');
-            s.className = 'paren-line';
-            s.textContent = line;
-            wrap.appendChild(s);
-          });
-        } else if (item.t === 'code') {
-          const s = document.createElement('span');
-          s.className = 'code-line';
-          s.textContent = item.text;
-          wrap.appendChild(s);
-        }
-        container.appendChild(wrap);
-        revealList.push(wrap);
-      });
-    }
+    const container  = document.getElementById('poem');
     const revealList = [];
+    POEM.forEach(item => {
+      if (item.t === 'blank') {
+        const spacer = document.createElement('div');
+        spacer.style.height = item.h + 'px';
+        container.appendChild(spacer);
+        revealList.push(null);
+        return;
+      }
+      const wrap = document.createElement('div');
+      wrap.classList.add('poem-item');
+      if (item.photo) wrap.id = 'trigger-' + item.photo;
+      if (item.t === 'address') {
+        wrap.classList.add('address-wrap');
+        const s = document.createElement('span');
+        s.className = 'address'; s.textContent = item.text; wrap.appendChild(s);
+      } else if (item.t === 'address-sm') {
+        const s = document.createElement('span');
+        s.className = 'address-sm'; s.textContent = item.text; wrap.appendChild(s);
+      } else if (item.t === 'line') {
+        const s = document.createElement('span');
+        s.className = 'l ' + item.s; s.textContent = item.text; wrap.appendChild(s);
+      } else if (item.t === 'paren') {
+        wrap.classList.add('paren-block');
+        item.lines.forEach(line => {
+          const s = document.createElement('span');
+          s.className = 'paren-line'; s.textContent = line; wrap.appendChild(s);
+        });
+      } else if (item.t === 'code') {
+        const s = document.createElement('span');
+        s.className = 'code-line'; s.textContent = item.text; wrap.appendChild(s);
+      }
+      container.appendChild(wrap);
+      revealList.push(wrap);
+    });
     let idx = 0;
     function reveal() {
       if (idx >= revealList.length) return;
@@ -799,24 +753,49 @@
       if (el) el.classList.add('visible');
       idx++;
       setTimeout(reveal, 90);
-    }
-    function setupFotos() {
+}
+window.addEventListener('DOMContentLoaded', () => {
+        criarEstrelas();
+        setupFotos();
+        setTimeout(reveal, 700);
+    });
+    setTimeout(reveal, 700)
+   function
+   criarEstrelas() {
+  const container = document.createElement('div');
+  container.id = 'stars-container';
+  document.body.prepend(container);
+  for (let i = 0; i < 140; i++) {
+    const star = document.createElement('div');
+    star.classList.add('star');
+    star.style.left = `${Math.random() * 100}vw`;
+    star.style.top = `${Math.random() * 100}vh`;
+    const size = Math.random() * 1.5 + 1;
+    star.style.width = `${size}px`;
+    star.style.height = `${size}px`;
+    star.style.animationDuration = `${Math.random() * 3 + 2}s`;
+    star.style.animationDelay = `${Math.random() * 5}s`;
+    container.appendChild(star);
+  }
+}
+    function
+    setupFotos() {
       const wrapper = document.getElementById('wrapper');
       const wrapperTop = wrapper.getBoundingClientRect().top + window.pageYOffset;
       const isMobile = window.innerWidth <= 820;
-      [1, 2, 3, 4].forEach(n => {
+      [1,2,3,4].forEach(n => {
         const trigger = document.getElementById('trigger-' + n);
-        const photo = document.getElementById('photo-' + n);
+        const photo   = document.getElementById('photo-'   + n);
         if (!trigger || !photo) return;
         if (!isMobile) {
           const triggerTop = trigger.getBoundingClientRect().top + window.pageYOffset;
           const triggerMid = triggerTop - wrapperTop + trigger.offsetHeight / 2;
-          const photoHalf = photo.offsetHeight / 2;
-          photo.style.top = Math.max(0, triggerMid - photoHalf) + 'px';
+          const photoHalf  = photo.offsetHeight / 2;
+          photo.style.top  = Math.max(0, triggerMid - photoHalf) + 'px';
         }
       });
       if (isMobile) {
-        [1, 2, 3, 4].forEach(n => {
+        [1,2,3,4].forEach(n => {
           const photo = document.getElementById('photo-' + n);
           if (photo) photo.classList.add('active');
         });
@@ -830,18 +809,13 @@
           photo.classList.toggle('active', entry.isIntersecting);
         });
       }, { threshold: 0.4 });
-      [1, 2, 3, 4].forEach(n => {
+      [1,2,3,4].forEach(n => {
         const trigger = document.getElementById('trigger-' + n);
         if (trigger) observer.observe(trigger);
       });
     }
-    document.addEventListener('DOMContentLoaded', () => {
-      criarEstrelas();
-      renderPoema();
-      setTimeout(reveal, 700);
-      document.fonts.ready.then(() => setTimeout(setupFotos, 200));
-      window.addEventListener('resize', () => setTimeout(setupFotos, 200));
-    });
+    document.fonts.ready.then(() => setTimeout(setupFotos, 200));
+    window.addEventListener('resize', () => setTimeout(setupFotos, 200));
   </script>
 </body>
 </html>
